@@ -1,0 +1,33 @@
+.action {
+    display: flex;
+    gap: 10px;
+    
+    img{
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+    }
+}
+
+.dataGrid {
+
+
+
+    .dataGrid{
+        background-color: aliceblue;
+        padding: 20px;
+
+
+
+        .MuiDataGrid-toolbarContainer {
+            flex-direction: row-reverse;
+        }
+
+        img{
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+}
