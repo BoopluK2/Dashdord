@@ -1,7 +1,7 @@
 import { GridColDef } from '@mui/x-data-grid'
 import React from 'react'
 import "./add.scss"
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { InvalidateQueryFilters, useMutation, useQueryClient } from '@tanstack/react-query';
 
 
 
@@ -37,7 +37,8 @@ const Add = (props: Props) => {
       });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries([`all${props.slug}s`]);
+      queryClient.invalidateQueries(`all${String(props.slug)}s` as InvalidateQueryFilters);
+
     }
   })
   
