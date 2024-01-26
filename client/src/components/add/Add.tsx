@@ -1,10 +1,8 @@
 import { GridColDef } from '@mui/x-data-grid'
-import { v4 } from "uuid";
 import React from 'react'
 import "./add.scss"
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-const id = v4();
 
 
 type Props = {
@@ -16,7 +14,6 @@ type Props = {
 
 const Add = (props: Props) => {
   
-  console.log(id)
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
@@ -28,7 +25,7 @@ const Add = (props: Props) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id: 110,
+          id: 23,
           img: "",
           lastName: "Hubbardaa",
           firstName: "Eulaaa",

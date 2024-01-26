@@ -3,13 +3,13 @@ import "./products.scss"
 import DataTable from '../../components/dataGrid/DataGrid';
 import Add from '../../components/add/Add';
 import { useQuery } from '@tanstack/react-query';
-import { GridValueGetterParams } from '@mui/x-data-grid';
+import { GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
       field: "img", headerName: "Avatar", width: 100,
-      renderCell: (params: GridValueGetterParams) => {
+      renderCell: (params) => {
           return <img src={params.row.img || "/noavatar.png"} alt="" />
       }
   },
