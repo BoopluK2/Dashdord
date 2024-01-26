@@ -62,7 +62,7 @@ const Products = () => {
 
   const { isLoading, data } = useQuery({
     queryKey: ['allproducts'],
-    queryFn: () => fetch('https://dashbord-server-nine.vercel.app/api/products').then(res => res.json()),
+    queryFn: () => fetch('https://dashdord.vercel.app/api/products').then(res => res.json()),
   });
 
   console.log(data)

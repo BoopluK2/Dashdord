@@ -53,7 +53,7 @@ const Users = () => {
 
   const { isLoading, data } = useQuery({
     queryKey: ['allusers'],
-    queryFn: () => fetch('https://dashbord-server-nine.vercel.app/api/users').then(res => res.json()),
+    queryFn: () => fetch('https://dashdord.vercel.app/api/users').then(res => res.json()),
   });
   
   console.log(data.id)
