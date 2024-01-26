@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./dataGrid.scss";
 import { DataGrid, GridColDef, GridToolbar} from '@mui/x-data-grid';
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { InvalidateQueryFilters, useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
     columns: GridColDef[],
@@ -20,7 +20,8 @@ const DataTable = (props: Props) => {
           });
         },
         onSuccess: () => {
-          queryClient.invalidateQueries(`all${props.slug}`);
+            queryClient.invalidateQueries(`all${String(props.slug)}` as InvalidateQueryFilters);
+
         },
       });
       

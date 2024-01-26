@@ -52,7 +52,7 @@ const Users = () => {
   const [open, setOpen] = useState(false);
 
   const { isLoading, data } = useQuery({
-    queryKey: ['allusers'],
+    queryKey: ["allusers"],
     queryFn: () => fetch('https://dashdord.vercel.app/api/users').then(res => res.json()),
   });
   
