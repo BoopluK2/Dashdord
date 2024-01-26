@@ -4,6 +4,10 @@
 .topBox {
     h1{
         margin-bottom: 20px;
+        @include sm {
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
     }
 
 
@@ -29,6 +33,14 @@
                     border-radius: 50%;
                     object-fit: cover;
 
+                    @include sm {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+
                     @include xxl {
                         display: none;
                     }
@@ -44,17 +56,17 @@
                     .username{
                         font-size: 14px;
                         font-weight: 500;
+
+                        
                     }
 
                     .email{
                         font-size: 12px;
 
-                          @include xxl {
-                        display: none;
-                    }
-                    @include lg {
-                        display: block;
-                    }
+                        @include sm {
+                            display: none;
+                        }
+                          
                     
                     }
                 }
@@ -62,6 +74,10 @@
 
             .amount{
                 font-weight: 500;
+
+                @include sm {
+                    font-size: 14px;
+                }
             }
         }
     }
